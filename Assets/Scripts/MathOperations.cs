@@ -4,10 +4,6 @@ public class MathOperations : MonoBehaviour
 {
     void Start()
     {
-        //int number = 420;
-        //Debug.Log(number);      // Logs 420
-        //Debug.Log("number");    // Logs number
-
         int health = 100;
         int defense = 10;
         int attack = 50;
