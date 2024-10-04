@@ -14,6 +14,18 @@ public class Ball : MonoBehaviour
 
     void Update()
     {
+        // If the ball is too far right, make it go left (1%, free)
+        if (transform.position.x > 10.0f)
+        {
+            direction = -direction;
+        }
+
+        // If the ball is too far left, make it go right (1%)
+
+        // If the ball is too far up, make it go down (1%)
+
+        // If the ball is too far down, make it go up (1%)
+
         float dt = Time.deltaTime;
         Vector3 change = direction * speed * dt;
         transform.position = transform.position + change;
