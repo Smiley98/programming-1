@@ -11,7 +11,7 @@ public class Loops : MonoBehaviour
         // for-loops start with a counter (int i = 0 in this case)
         // Then they have a condition which determines whether we continue the loop
         // Lastly they increment the counter if the condition is met
-        for (int i = 0; i < 10; i++)
+        for (int i = 0; i <= 10; i++)
         {
             Debug.Log(i);
         }
@@ -22,10 +22,11 @@ public class Loops : MonoBehaviour
         Instantiate(rect).transform.position = new Vector3(-5.0f, 0.0f);
         Instantiate(rect).transform.position = new Vector3(0.0f, 5.0f);
         Instantiate(rect).transform.position = new Vector3(0.0f, -5.0f);
-    }
 
-    //void Update()
-    //{
-    //    
-    //}
+        // Loop to create the top border
+        for (int i = 0; i <= 10; i++)
+        {
+            Instantiate(rect).transform.position = new Vector3(-10 + i * 2, 5.0f);
+        }
+    }
 }
