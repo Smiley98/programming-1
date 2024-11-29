@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class PhysicsObject : MonoBehaviour
 {
-    Vector2 acc = Physics.gravity;
-    Vector2 vel = Vector2.up * 10.0f;
+    public Vector2 acc = Physics.gravity;
+    public Vector2 vel = Vector2.up * 10.0f;
     void Start()
     {
         
@@ -22,7 +22,8 @@ public class PhysicsObject : MonoBehaviour
         // (So you're not hard-coding position <= -5 and vel = [0, 10])
         if (transform.position.y <= -5.0f)
         {
-            vel = new Vector2 (0.0f, 10.0f);
+            transform.position = new Vector3(transform.position.x, -5.0f);
+            vel = new Vector2(0.0f, 10.0f);
         }
     }
 }
